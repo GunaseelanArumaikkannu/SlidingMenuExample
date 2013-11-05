@@ -1,0 +1,60 @@
+<com.android.slidingmenuexample.MainLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/menu_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_purple"
+            android:cacheColorHint="#00000000" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+		
+        <!-- This acts as Actionbar -->
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@android:color/darker_gray"
+	        android:orientation="horizontal" >
+            
+            <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:onClick="toggleMenu"
+	            android:text="Menu"
+	            android:id="@+id/button_menu" />
+            
+            <TextView
+			     android:layout_width="0dp"
+			     android:layout_height="wrap_content"
+			     android:text="Layout 1"
+			     android:gravity="center"
+			     android:id="@+id/activity_main_content_title"
+			     android:layout_weight="1" />
+            
+        </LinearLayout>       
+        
+        <!-- This is where fragment will show up -->
+        <FrameLayout
+		    android:id="@+id/activity_main_content_fragment"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent" >
+        
+    	</FrameLayout>
+        
+    </LinearLayout>
+
+</com.android.slidingmenuexample.MainLayout>
