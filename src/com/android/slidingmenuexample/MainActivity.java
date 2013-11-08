@@ -75,7 +75,7 @@ public class MainActivity extends FragmentActivity {
         FragmentManager fm = MainActivity.this.getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         
-        FragmentMain fragment = new FragmentMain();
+        Layout1 fragment = new Layout1();
         ft.add(R.id.activity_main_content_fragment, fragment);
         ft.commit();   
         
@@ -109,9 +109,9 @@ public class MainActivity extends FragmentActivity {
 
         
         if(selectedItem.compareTo("Layout 1") == 0) {
-            fragment = new FragmentMain();
+            fragment = new Layout1();
         } else if(selectedItem.compareTo("Layout 2") == 0) {
-            fragment = new FragmentButton();
+            fragment = new Layout2();
         }
         
         if(fragment != null) {
